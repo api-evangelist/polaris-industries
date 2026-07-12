@@ -1,0 +1,15 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.polaris-industries.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug  3 01:02:09 2026 GMT
+  hsts: null
+domains:
+- domain: polaris-industries.com
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: false
