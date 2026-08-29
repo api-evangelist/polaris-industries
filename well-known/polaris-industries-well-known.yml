@@ -1,0 +1,94 @@
+generated: '2026-08-28'
+method: probed
+source: >-
+  Live unauthenticated HTTP probes (2026-08-28) of every Polaris Inc. host reachable from
+  apis.yml and from contract discovery — www.polaris.com (corporate + brand site),
+  api.polaris.com (live gateway), www.polarisportal.com (dealer portal) and
+  polarisdealers.auth0.com (the Auth0 identity tenant the dealer portal delegates to).
+note: >-
+  Only ONE Polaris host serves a real /.well-known document: polarisdealers.auth0.com, the
+  Auth0 tenant behind the Polaris dealer portal, which returns a full OpenID Connect discovery
+  document and the identical RFC 8414 OAuth authorization-server metadata. Ownership is
+  evidenced by the login flow itself — https://www.polarisportal.com/ (and
+  https://www.polarisdealers.com/) 302 to https://polarisdealers.auth0.com/login with
+  audience=https://polarisportal.com and redirect_uri=https://www.polarisportal.com/signin-oidc-auth0dealeruser.
+  The document is Auth0-hosted infrastructure configured by Polaris, not a first-party
+  polaris.com surface — recorded here as reachable identity metadata, nothing more.
+  www.polaris.com sits behind a Cloudflare bot challenge that answers 403 to a crawler on
+  every /.well-known/ path, so those rows are "challenged", not "absent". api.polaris.com is a
+  live IBM DataPower/API Connect gateway (x-backside-transport: FAIL FAIL) that returns
+  HTTP 500 to every anonymous request on every path.
+hosts:
+- host: polarisdealers.auth0.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: polaris-industries-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: polaris-industries-oauth-authorization-server.json
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: www.polaris.com
+  note: Cloudflare bot challenge (HTTP 403, 520-byte interstitial) on every /.well-known/ path.
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/ai-plugin.json
+    status: 403
+  - path: /.well-known/agent-card.json
+    status: 403
+  - path: /.well-known/agent.json
+    status: 403
+- host: api.polaris.com
+  note: >-
+    Live host (Cloudflare in front of an IBM DataPower / API Connect gateway) that answers
+    HTTP 500 with a zero-length application/xml body on every path, authenticated or not.
+  documents:
+  - path: /.well-known/security.txt
+    status: 500
+  - path: /.well-known/openid-configuration
+    status: 500
+  - path: /.well-known/oauth-authorization-server
+    status: 500
+  - path: /.well-known/oauth-protected-resource
+    status: 500
+  - path: /.well-known/api-catalog
+    status: 500
+  - path: /.well-known/ai-plugin.json
+    status: 500
+  - path: /.well-known/agent-card.json
+    status: 500
+  - path: /.well-known/agent.json
+    status: 500
+- host: www.polarisportal.com
+  note: Dealer portal; unauthenticated requests 302 to the Auth0 tenant. All /.well-known/ paths 404.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404

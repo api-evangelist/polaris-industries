@@ -1,32 +1,106 @@
 aid: polaris-industries
 name: "Polaris Industries"
+deliveryModel:
+  model: none
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: No public API product — powersports vehicles are the product; no developer program exists
+  confidence: high
+  source:
+  - https://www.polaris.com/
+  - https://api.polaris.com/
+  generated: '2026-08-28'
+  method: probed
 specificationVersion: '0.23'
 accessModel:
-  pricing: unknown
-  onboarding: unknown
+  pricing: none
+  onboarding: none
   trial: false
   try_now: false
   public: false
-  label: Unknown
-  confidence: low
-  source: []
-  generated: '2026-07-22'
-  method: derived
+  label: No public API access model — the only credentialed surface is a dealer/partner portal login
+  confidence: high
+  source:
+  - https://www.polarisportal.com/
+  generated: '2026-08-28'
+  method: probed
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/polaris-industries.png
 tags:
   - Fortune 1000
+  - Manufacturing
+  - Powersports
+  - Automotive
+  - Consumer Products
+  - Connected Vehicles
+  - Marine
 url: 
   https://raw.githubusercontent.com/api-evangelist/polaris-industries/refs/heads/main/apis.yml
-modified: '2026-03-24'
+created: '2026-03-24'
+modified: '2026-08-28'
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com
+    url: https://apievangelist.com
 apis: []
 common:
-  - type: DomainSecurity
-    url: security/polaris-industries-domain-security.yml
+  - type: Website
+    url: https://www.polaris.com/
   - type: LinkedIn
     url: https://www.linkedin.com/company/polarisinc
-  - type: Website
-    url: https://www.polaris-industries.com
+  - type: TermsOfService
+    url: https://www.polaris.com/en-us/terms/
+  - type: PrivacyPolicy
+    url: https://www.polaris.com/en-us/privacy/
+  - type: DomainSecurity
+    url: security/polaris-industries-domain-security.yml
+  - type: WellKnown
+    url: well-known/polaris-industries-well-known.yml
+  - type: Authentication
+    url: authentication/polaris-industries-authentication.yml
+  - type: OAuthScopes
+    url: scopes/polaris-industries-scopes.yml
+  - type: Conformance
+    url: conformance/polaris-industries-conformance.yml
+  - type: LLMsTxt
+    url: llms/polaris-industries-llms.txt
 description: >-
-  Polaris Industries is a global manufacturer of powersports vehicles including snowmobiles,
-  all-terrain vehicles, motorcycles, and personal watercraft under brands including
-  Polaris, Indian Motorcycle, and others.
+  Polaris Inc. (NYSE: PII), long known as Polaris Industries, is a Minnesota-based global
+  manufacturer of powersports and off-road vehicles. Its portfolio spans RANGER, RZR,
+  Polaris XPEDITION and GENERAL side-by-sides, Sportsman ATVs, snowmobiles, Slingshot
+  moto-roadsters, military and commercial off-road vehicles, Aixam quadricycles, Goupil
+  electric utility vehicles, and Bennington and Godfrey pontoon and deck boats. Its
+  connected-vehicle platform, RIDE COMMAND, ships in-dash navigation and vehicle telematics
+  to riders as an end-user product. Polaris completed the separation of Indian Motorcycle
+  and the sale of a majority stake to Carolwood LP on 2 February 2026. Polaris publishes no
+  public API, developer portal or machine-readable specification; the only credentialed
+  integration surface a member of the public can find is the dealer portal at
+  polarisportal.com, which authenticates against an Auth0 tenant.
+x-enrichment:
+  date: '2026-08-28'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Polaris Inc. runs a live API gateway at api.polaris.com (IBM DataPower / API Connect
+    behind Cloudflare, x-backside-transport: FAIL FAIL) that answers HTTP 500 with a
+    zero-length body to every anonymous path, and there is no developer hostname at all —
+    developer.polaris.com and developers.polaris.com are NXDOMAIN — so the gateway is a
+    private backend for the RIDE COMMAND app and the polarisportal.com dealer portal, not a
+    published developer program; the only Polaris-served document reachable without
+    credentials is the OpenID Connect discovery for the dealer portal's Auth0 tenant.
+  evidence:
+    - url: https://api.polaris.com/openapi.json
+      status: 500
+    - url: https://developer.polaris.com/
+      status: 0
+    - url: https://www.polaris.com/llms.txt
+      status: 404
+    - url: https://www.polaris-industries.com/
+      status: 404
+    - url: https://polarisdealers.auth0.com/.well-known/openid-configuration
+      status: 200
+  checked: '2026-08-28'

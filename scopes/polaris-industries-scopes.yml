@@ -1,0 +1,63 @@
+generated: '2026-08-28'
+method: probed
+source: https://polarisdealers.auth0.com/.well-known/openid-configuration
+docs: null
+note: >-
+  These are the scopes_supported advertised by the OpenID Connect discovery document for the
+  Polaris dealer-portal identity tenant. They are standard OIDC/Auth0 identity scopes — there
+  are NO Polaris business/API scopes published anywhere, because Polaris publishes no public
+  API. Do not read this file as an API permission model; it is the identity surface only.
+  The live dealer-portal login requests only: openid profile email offline_access.
+issuer: https://polarisdealers.auth0.com/
+audience: https://polarisportal.com
+requested_by_dealer_portal:
+- openid
+- profile
+- email
+- offline_access
+scopes:
+- name: openid
+  description: OIDC — request an ID token.
+- name: profile
+  description: OIDC — basic profile claims.
+- name: offline_access
+  description: OIDC — issue a refresh token.
+- name: name
+  description: Identity claim — full name.
+- name: given_name
+  description: Identity claim — given name.
+- name: family_name
+  description: Identity claim — family name.
+- name: nickname
+  description: Identity claim — nickname.
+- name: email
+  description: Identity claim — email address.
+- name: email_verified
+  description: Identity claim — whether the email address is verified.
+- name: picture
+  description: Identity claim — profile picture URL.
+- name: created_at
+  description: Identity claim — account creation timestamp.
+- name: identities
+  description: Identity claim — linked identity providers.
+- name: phone
+  description: Identity claim — phone number.
+- name: address
+  description: Identity claim — postal address.
+claims_supported:
+- aud
+- auth_time
+- created_at
+- email
+- email_verified
+- exp
+- family_name
+- given_name
+- iat
+- identities
+- iss
+- name
+- nickname
+- phone_number
+- picture
+- sub

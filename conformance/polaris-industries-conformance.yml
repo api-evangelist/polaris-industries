@@ -1,0 +1,87 @@
+generated: '2026-08-28'
+method: probed
+source: >-
+  Live probes 2026-08-28 of polarisdealers.auth0.com discovery documents, api.polaris.com,
+  www.polaris.com and www.polarisportal.com. No OpenAPI, AsyncAPI, GraphQL SDL, WSDL, .proto
+  or Postman collection is published by Polaris Inc. anywhere we could reach, so every
+  contract-level assertion below is recorded false with the probe that established it.
+note: >-
+  Polaris Inc. is a powersports vehicle manufacturer with no public developer program. The
+  only cross-cutting standards it demonstrably implements on a publicly reachable surface are
+  OAuth 2.0 / OIDC on its dealer-portal identity tenant. Domain-standard conformance is
+  REWARD-ONLY and the powersports/durable-goods market has no published API standard to
+  conform to, so that slot is recorded na rather than false — nothing is invented to fill it.
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    RFC 8414 authorization-server metadata served at
+    https://polarisdealers.auth0.com/.well-known/oauth-authorization-server (HTTP 200) with
+    authorize/token/revoke endpoints and 14 grant types.
+- id: oidc
+  conforms: true
+  evidence: >-
+    Full OpenID Connect discovery document at
+    https://polarisdealers.auth0.com/.well-known/openid-configuration (HTTP 200): issuer,
+    jwks_uri, userinfo_endpoint, claims_supported, subject_types_supported.
+- id: pkce
+  conforms: true
+  evidence: >-
+    code_challenge_methods_supported [S256, plain]; the deployed dealer-portal login
+    redirect uses code_challenge_method=S256.
+- id: jwt
+  conforms: true
+  evidence: >-
+    RS256/RS384/PS256 signing advertised; JWKS served at
+    https://polarisdealers.auth0.com/.well-known/jwks.json (HTTP 200).
+- id: openapi
+  conforms: false
+  evidence: >-
+    No OpenAPI at any probed location. api.polaris.com/{openapi.json,swagger.json,api-docs,
+    docs,v1/openapi.json} all HTTP 500; www.polaris.com equivalents 403 (Cloudflare bot
+    challenge); developer.polaris.com and developers.polaris.com do not resolve in DNS.
+- id: asyncapi
+  conforms: false
+  evidence: No event, streaming or webhook surface is published or documented.
+- id: graphql
+  conforms: false
+  evidence: https://api.polaris.com/graphql returned HTTP 500; no /graphql surface documented.
+- id: grpc
+  conforms: false
+  evidence: No .proto published; no Polaris Inc. GitHub organization exists.
+- id: soap-wsdl
+  conforms: false
+  evidence: No ?wsdl / ?singleWsdl surface responded on any Polaris host.
+- id: rfc9457
+  conforms: false
+  evidence: No published error contract to assert application/problem+json against.
+- id: rfc9116
+  conforms: false
+  evidence: >-
+    No security.txt served — www.polaris.com/.well-known/security.txt 403 (bot challenge),
+    polarisdealers.auth0.com 404, www.polarisportal.com 404.
+- id: rfc8594
+  conforms: false
+  evidence: No published deprecation/sunset policy or Sunset/Deprecation header contract.
+- id: mcp
+  conforms: false
+  evidence: No MCP server published; https://api.polaris.com/mcp returned HTTP 500.
+- id: a2a
+  conforms: false
+  evidence: >-
+    /.well-known/agent-card.json and /.well-known/agent.json probed on www.polaris.com (403),
+    api.polaris.com (500), www.polarisportal.com (404), polarisdealers.auth0.com (404) and
+    ridecommand.polaris.com (404). No agent card anywhere.
+- id: llmstxt
+  conforms: false
+  evidence: >-
+    https://www.polaris.com/llms.txt 404, https://ridecommand.polaris.com/llms.txt 404,
+    https://www.indianmotorcycle.com/llms.txt 404.
+domain_standard:
+  applicable: false
+  id: null
+  conforms: na
+  evidence: >-
+    Powersports vehicle manufacturing has no market-wide machine-readable API standard
+    (no SCIM/OData/OpenRTB/FHIR/ISO-20022/LTI analogue). Recorded na — reward-only slot,
+    not a penalty, and nothing is invented to fill it.
