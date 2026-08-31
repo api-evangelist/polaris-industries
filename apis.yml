@@ -29,6 +29,14 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/polaris-in
 tags:
   - Fortune 1000
   - Manufacturing
+  - Power-Sports
+  - Automotive
+  - Consumer Products
+  - Connected Vehicles
+  - Marine
+tags_raw:
+  - Fortune 1000
+  - Manufacturing
   - Powersports
   - Automotive
   - Consumer Products
