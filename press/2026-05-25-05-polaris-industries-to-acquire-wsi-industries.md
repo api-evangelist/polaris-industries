@@ -1,7 +1,9 @@
 ---
 title: Polaris Industries To Acquire WSI Industries
 url: https://www.aftermarketnews.com/polaris-industries-to-acquire-wsi-industries/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Polaris Industries" press release artificial intelligence'
 position: 5
 source: serpapi-google

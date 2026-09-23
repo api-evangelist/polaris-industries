@@ -1,7 +1,9 @@
 ---
 title: Polaris Industries' Breakthrough Innovation Through ...
 url: https://www.planview.com/resources/case-study/polaris-industries-driving-breakthrough-innovation-through-crowdsourcing/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Polaris Industries" press release artificial intelligence'
 position: 2
 source: serpapi-google

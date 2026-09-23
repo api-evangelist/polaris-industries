@@ -1,7 +1,9 @@
 ---
 title: Polaris Technologies, Inc. announced the company will ...
 url: https://www.facebook.com/fox23news/posts/polaris-technologies-inc-announced-the-company-will-build-a-200mw-data-center-at/935340754622638/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Polaris Industries" press release artificial intelligence'
 position: 4
 source: serpapi-google

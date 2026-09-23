@@ -1,7 +1,9 @@
 ---
 title: Polaris Industries is selling Indian Motorcycle
 url: https://www.ktiv.com/2025/10/14/polaris-industries-is-selling-indian-motorcycle/
-date: '2026-05-25'
+published: '2025-10-14'
+date_basis: url-derived
+harvested: '2026-05-25'
 query: '"Polaris Industries" press release artificial intelligence'
 position: 3
 source: serpapi-google
