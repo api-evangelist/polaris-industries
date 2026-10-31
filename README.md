@@ -64,12 +64,88 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-This is a repository for tracking the APIs, SDKs, and other developer resources for Polaris Industries.
+Polaris Inc. (NYSE: PII), long known as Polaris Industries, is a Minnesota-based global manufacturer of powersports and off-road vehicles. Its portfolio spans RANGER, RZR, Polaris XPEDITION and GENERAL side-by-sides, Sportsman ATVs, snowmobiles, Slingshot moto-roadsters, military and commercial off-road vehicles, Aixam quadricycles, Goupil electric utility vehicles, and Bennington and Godfrey pontoon and deck boats. Its connected-vehicle platform, RIDE COMMAND, ships in-dash navigation and vehicle telematics to riders as an end-user product. Polaris completed the separation of Indian Motorcycle and the sale of a majority stake to Carolwood LP on 2 February 2026. Polaris publishes no public API, developer portal or machine-readable specification; the only credentialed integration surface a member of the public can find is the dealer portal at polarisportal.com, which authenticates against an Auth0 tenant.
 
-## APIs
+**Areas:** Fortune 1000 · Manufacturing · Power-Sports · Automotive · Consumer Products · Connected Vehicles · Marine
 
-No APIs have been documented yet. Check back for updates.
+## Polaris Industries on APIs.io
 
-## Properties
+Everything profiled for Polaris Industries is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/polaris-industries/](https://apis.io/providers/polaris-industries/)** — or go straight to one of the APIs or properties below.
 
-- [Website](https://www.polaris-industries.com)
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Polaris Industries Authentication](https://apis.io/security/polaris-industries/polaris-industries-authentication/)
+- [Polaris Industries Domain Security](https://apis.io/security/polaris-industries/polaris-industries-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Polaris Industries Scopes](https://apis.io/scopes/polaris-industries/polaris-industries-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.polaris.com/)
+- [Terms of service](https://www.polaris.com/en-us/terms/)
+- [Privacy policy](https://www.polaris.com/en-us/privacy/)
+
+## API Evangelist rating
+
+**Kin Score 16.8** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 21.1 |
+
+**Agent readiness 15.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+
+**Regulatory alignment 34.4** — Energy & Utilities
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/polaris-industries/](https://apis.io/providers/polaris-industries/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Polaris Industries: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/polaris-industries/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
